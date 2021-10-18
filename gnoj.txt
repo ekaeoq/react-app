@@ -1,2 +1,8 @@
 18.10.2021.
 -test
+-osim toga nist
+-za 19.10.2021.
+	-make shit swipable
+	-da se neka vrijednost mijenja on swipe
+	-istrazi te library-ije
+
