@@ -5,4 +5,7 @@
 	-make shit swipable
 	-da se neka vrijednost mijenja on swipe
 	-istrazi te library-ije
+20.10.2021.
+-positioning do kraja
+-state za gumbe
 
