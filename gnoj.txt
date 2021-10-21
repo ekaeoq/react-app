@@ -8,4 +8,8 @@
 20.10.2021.
 -positioning do kraja
 -state za gumbe
+21.10.2021.
+-imamo text(nemamo nist drugo)
+-state za gumbe(redo)
+-positioning - fixed
 
