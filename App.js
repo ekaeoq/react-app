@@ -14,6 +14,7 @@ const Cat = () => {
 	  		defaultValue={text}
 	  	/>
 	  <Text style={style.addOnTextStyle}>
+	  	Brate mili jel ovo radi: {text}
 	  </Text>
 
 	  	
@@ -38,6 +39,13 @@ const style = StyleSheet.create({
 
 	textInputStyle: {
 		marginTop: 5,
+	},
+
+	addOnTextStyle: {
+		marginTop: 5,
+		borderWidth: 1,
+		borderColor: 'black',
+
 	}
 
 	
