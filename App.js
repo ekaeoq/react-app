@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import { Text, TextInput, Button, View, StyleSheet } from 'react-native';
+import Svip from './extra/Svip';
 
 const Cat = () => {
 	const [text, setText] = useState('')
@@ -16,6 +17,9 @@ const Cat = () => {
 	  <Text style={style.addOnTextStyle}>
 	  	Brate mili jel ovo radi: {text}
 	  </Text>
+	  <View>
+	  <Svip/>
+	  </View>
 
 	  	
 	  </View>
