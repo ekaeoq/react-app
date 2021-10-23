@@ -2,8 +2,16 @@ import React, {useState} from 'react';
 import { Text, TextInput, Button, View, KeyboardAvoidingView, StyleSheet } from 'react-native';
 import Svip from './extra/Svip';
 
-const Cat = () => {
+const Joj = () => {
 	const [text, setText] = useState('');
+	const [items, setItems] = useState([]);
+
+	const addItem = () => {
+		setItems([... items, {
+			id: items.length,
+			value: Math.floor(Math.random() * 10) + 1
+		}])
+	}
   return (
 	  <View style={style.jao}>
 	  	<Text style={style.prvo}>Hello</Text>
@@ -14,21 +22,25 @@ const Cat = () => {
 	  		onChangeText={text => setText(text)}
 	  		defaultValue={text}
 	  	/>
-	  <Text style={style.addOnTextStyle}>
-	  	Brate mili jel ovo radi: {text}
-	  </Text>
-	  <View>
-	  <Svip/>
-	  </View>
+	  	<Text style={style.addOnTextStyle}>
+	  		Brate mili jel ovo radi: {text}
+	  	</Text>
+	  	<View>
+	  		<Svip/>
+	  	</View>
 
 	  	
-	  <KeyboardAvoidingView
-	  	behaviour={Platform.OS === "ios" ? "padding" : "height"}
-	  	style={style.Testing}>
+	  	<KeyboardAvoidingView
+	  		behaviour={Platform.OS === "ios" ? "padding" : "height"}
+	  		style={style.Testing}>
 		
-	  	<TextInput style={style.TextInputTest}/>
+	  		<TextInput style={style.TextInputTest}/>
 
-	  </KeyboardAvoidingView>
+	  	</KeyboardAvoidingView>
+	  	<Button 
+	  		onPress={addItem}
+	  		title="bok"
+	  	/>
 	  </View>
   );
 }
@@ -63,4 +75,4 @@ const style = StyleSheet.create({
 
 });
 
-export default Cat;
+export default Joj;
