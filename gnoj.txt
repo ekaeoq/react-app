@@ -25,3 +25,7 @@
 -dodal sam neki cudan useState code koji ne dela,
 pa sam to zbrisal, sutra nastavi s array+state listom za dodavanje
 -'const addItem' bum ostavil za sad
+
+24.10.2021
+-veci fokus na funkcionalnost
+-zanemari razumijevanje nepotrebnih sranja

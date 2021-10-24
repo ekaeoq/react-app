@@ -18,6 +18,7 @@ const Joj = () => {
 	];
 	const arr = ["jao","bok","tko si ti"];
 
+
   return (
 	  <View style={style.jao}>
 	  	<Text style={style.prvo}>Hello</Text>
@@ -52,10 +53,6 @@ const Joj = () => {
 				return <Text key={index}>{name}</Text>
 
 			})}
-	  		{arrayTest.map(function(hana){
-				return <Text key={hana.id===1}> {hana.name} </Text>
-			})}
-	  		
 
 			
 	  	</View>
