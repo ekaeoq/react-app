@@ -29,3 +29,8 @@ pa sam to zbrisal, sutra nastavi s array+state listom za dodavanje
 24.10.2021
 -veci fokus na funkcionalnost
 -zanemari razumijevanje nepotrebnih sranja
+
+25.10.2021.
+-slozi useState();
+-[...array, newItem]
+-jos provjeri onChangeText za input shit
