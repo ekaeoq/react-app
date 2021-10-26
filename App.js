@@ -1,8 +1,12 @@
 import React, {useState} from 'react';
-import { Text, TextInput, Button, View, KeyboardAvoidingView, StyleSheet } from 'react-native';
+import { Text, FlatList, TextInput, Button, View, KeyboardAvoidingView, StyleSheet } from 'react-native';
 import Svip from './extra/Svip';
 
 const Joj = () => {
+	const [todos, setTodos] = useState([]);
+	const [textInput, setTextInput] = useState('');
+
+
 	const [text, setText] = useState('')
 	const [items, setItems] = useState([])
 
@@ -18,6 +22,18 @@ const Joj = () => {
 	];
 	const arr = ["jao","bok","tko si ti"];
 
+	const addTodo = () => {
+		const newTodo={
+			id:Math.random(),
+			task: textInput,
+			completed: false,
+
+		};
+		setTodos([...todos, newTodo]);
+		setTextInput('');
+	}
+		
+
 
   return (
 	  <View style={style.jao}>
@@ -26,7 +42,8 @@ const Joj = () => {
 	  	<TextInput
 	  		style={style.textInputStyle}
 	  		placeholder="Type"
-	  		onChangeText={text => setText(text)}
+	  		value={textInput}
+	  		onChangeText={(text)=>setTextInput(text)}
 	  		defaultValue={text}
 	  	/>
 	  	<Text style={style.addOnTextStyle}>
@@ -45,11 +62,11 @@ const Joj = () => {
 
 	  	</KeyboardAvoidingView>
 	  	<Button 
-	  		onPress={addItem}
+	  		onPress={addTodo}
 	  		title="bok"
 	  	/>
 	  	<View>
-	  		{arr.map(function(name,index){
+	  		{items.map(function(name,index){
 				return <Text key={index}>{name}</Text>
 
 			})}
