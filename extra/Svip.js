@@ -1,11 +1,11 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
-const Svip = () => {
+const Svip = (jao) => {
 	
 	return(
 		<View>
-			<Text>hi</Text>
+			<Text>{jao.text}</Text>
 		</View>
 	);
 };
