@@ -3,11 +3,6 @@ import { Text, Keyboard, TouchableOpacity, FlatList, TextInput, Button, View, Ke
 import Svip from './extra/Svip';
 
 const Joj = () => {
-	const arrayTest = [
-		{id: 1, name: "nekaj", penis: "jao"},
-		{id: 2, name: "bog", nijepenis: "auuuu"}
-	];
-	const arr = ["jao","bok","tko si ti"];
 	const [task, setTask] = useState();
 	const [taskItems, setTaskItems] = useState([]);
 	const handleAddTask = () => {
@@ -27,16 +22,7 @@ const Joj = () => {
   return (
 	  <View style={style.jao}>
 	  	<Text style={style.prvo}>Hello</Text>
-	  	<Text style={style.drugo}>Bok Hana, napokon sam krenul kuzit kak ova kurcina radi</Text>
-	  	<TextInput
-	  		style={style.textInputStyle}
-	  		placeholder="Type"
-	  		value={task}
-	  		onChangeText={text => setTask(text)}
-	  	/>
-	  	<View>
-	  		<Svip text={"hehe"}/>
-	  		{
+	  	<View>{
             taskItems.map((item, index) => {
               return (
                 <TouchableOpacity key={index}  onPress={() => completeTask(index)}>
@@ -51,7 +37,12 @@ const Joj = () => {
 	  		behaviour={Platform.OS === "ios" ? "padding" : "height"}
 	  		style={style.Testing}>
 		
-	  		<TextInput style={style.TextInputTest}/>
+	  		<TextInput 
+	  			style={style.TextInputTest}
+	  			placeholder="jebemtimater"
+	  			value={task}
+	  			onChangeText={text => setTask(text)}
+	  		/>
 
 	  	</KeyboardAvoidingView>
 	  	<Button 
@@ -61,7 +52,6 @@ const Joj = () => {
 	  </View>
   );
 }
-
 const style = StyleSheet.create({
 	prvo: {
 		marginTop: 80,
