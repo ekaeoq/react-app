@@ -88,7 +88,9 @@ const style = StyleSheet.create({
 	textInputTest: {
 		borderColor: 'black',
 		borderWidth: 1,
-		width: 270,
+		width: 285,
+		borderRadius: 5,
+		padding: 10,
 		paddingHorizontal: 10,
 	},
 

@@ -12,11 +12,19 @@ const Svip = (jao) => {
 
 const pipne = StyleSheet.create({
 	viktor: {
-		width: '100%',
-		backgroundColor: 'blue',
+		backgroundColor: 'black',
+	    padding: 10,
+	    borderRadius: 10,
+	    flexDirection: 'row',
+		alignItems: 'center',
+		justifyContent: 'space-between',
+		marginBottom: 20,
+		marginHorizontal: 20
+
 	},
 	hana: {
-		maxWidth: '80%',
+		backgroundColor: 'yellow',
+		fontSize: 17,
 	}
 
 });
