@@ -24,7 +24,7 @@ const Joj = () => {
 
   return (
 	  <View style={style.mainBoy}>
-	  	<Text style={style.prvo}>Hello</Text>
+	  	<Text style={style.prvo}>What not to forget:</Text>
 	  	<View>{
             taskItems.map((item, index) => {
               return (
@@ -41,13 +41,15 @@ const Joj = () => {
 	  		style={style.Testing}>
 	  		<TextInput 
 	  			style={style.textInputTest}
-	  			placeholder="jebemtimater"
+	  			placeholder="Type here"
 	  			value={task}
 	  			onChangeText={text => setTask(text)}
 	  		/>
 	  		<Button
+	  			color="black"
+	  			style={style.buttoner}
 	  			onPress={() => handleAddTask()}
-	  			title="bok"
+	  			title="Plop"
 	        />
 	  </KeyboardAvoidingView>
 	  </View>
@@ -59,8 +61,12 @@ const style = StyleSheet.create({
 	},
 
 	prvo: {
-		marginTop: 80,
-		textAlign: 'center',
+		marginTop: 65,
+		textAlign: 'left',
+		marginLeft: 30,
+		fontSize: 19,
+		paddingBottom: 13
+
 	},
 	drugo: {
 		marginTop: 5,
@@ -88,7 +94,7 @@ const style = StyleSheet.create({
 	textInputTest: {
 		borderColor: 'black',
 		borderWidth: 1,
-		width: 285,
+		width: 280,
 		borderRadius: 5,
 		padding: 10,
 		paddingHorizontal: 10,
